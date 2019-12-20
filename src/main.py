@@ -1,7 +1,5 @@
-import ImageInfoDictionaryCreator
-import FileDeleter
-import FileNameLoader
-from ImageInfo import ImageInfo
+from src import FileNameLoader, ImageInfoDictionaryCreator, FileDeleter
+from src.ImageInfo import ImageInfo
 
 folder_path = "photos_for_project/*"
 
