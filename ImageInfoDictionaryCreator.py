@@ -1,4 +1,4 @@
-def add_image_info_to_map(map_of_image_hashes, image_info):
+def _add_image_info_to_map(map_of_image_hashes, image_info):
     image_hash = str(image_info.image_hash)
     image_name = image_info.image_name
 
@@ -9,11 +9,11 @@ def add_image_info_to_map(map_of_image_hashes, image_info):
 
 
 def map_image_hash_to_list_of_image_names(image_infos):
-    map_of_image_hashes = {}
+    image_hashes_to_list_of_image_names = {}
     for image_info in image_infos:
-        add_image_info_to_map(map_of_image_hashes, image_info)
+        _add_image_info_to_map(image_hashes_to_list_of_image_names, image_info)
 
-    return map_of_image_hashes
+    return image_hashes_to_list_of_image_names
 
 
 # TODO rename
