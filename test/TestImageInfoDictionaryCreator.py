@@ -1,5 +1,5 @@
 import unittest
-from src import ImageInfoDictionaryCreator
+from src.image_utils import ImageInfoDictionaryCreator
 
 
 class TestImageInfoDictionaryCreator(unittest.TestCase):
@@ -10,7 +10,7 @@ class TestImageInfoDictionaryCreator(unittest.TestCase):
             "valuesTooShort2": ["element1"],
             "valuesWillBeFiltered": ["element1", "element2", "element3"]
         }
-        filtered_dictionary = ImageInfoDictionaryCreator.filter_hashes_with_duplicate_images(dictionary)
+        filtered_dictionary = ImageInfoDictionaryCreator._filter_hashes_with_duplicate_images(dictionary)
         self.assertTrue("valuesWillBeFiltered" in filtered_dictionary)
 
 
